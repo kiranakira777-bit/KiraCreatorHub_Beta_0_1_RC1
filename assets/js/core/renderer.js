@@ -8,11 +8,21 @@ export const Renderer = {
     render(html, callback) {
         if (this.appContainer) {
             this.appContainer.innerHTML = html;
-            if (window.lucide) {
-                window.lucide.createIcons();
+            
+            try {
+                if (window.lucide) {
+                    window.lucide.createIcons();
+                }
+            } catch (e) {
+                console.error("Gagal merender Lucide Icons:", e);
             }
+
             if (typeof callback === 'function') {
-                callback();
+                try {
+                    callback();
+                } catch (e) {
+                    console.error("Error saat menjalankan init modul:", e);
+                }
             }
         }
     }
