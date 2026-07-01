@@ -5,29 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kira Creator Hub</title>
     
-    <!-- Pindahkan CSS ke sini agar lebih reliable di Vercel -->
+    <!-- CSS dipanggil langsung agar aman 100% load di Vercel -->
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/components.css">
     
     <style>
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .loading-screen {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: #6B7280;
-            font-size: 15px;
-        }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .loading-screen { display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: sans-serif; color: #6B7280; font-size: 15px; }
     </style>
 </head>
 <body>
-    <!-- Tambahkan teks fallback jika JS gagal -->
     <div id="app">
         <div class="loading-screen">Memuat Aplikasi...</div>
     </div>
