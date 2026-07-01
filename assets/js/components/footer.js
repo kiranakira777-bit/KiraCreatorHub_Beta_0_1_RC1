@@ -1,4 +1,4 @@
-import { APP_CONFIG } from '../../config/app-config.js';
+import { APP_CONFIG } from '../../../config/app-config.js'; // PATH BENAR
 
 export const Footer = () => {
     return `
